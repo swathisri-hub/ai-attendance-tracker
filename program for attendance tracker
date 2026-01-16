@@ -1,0 +1,17 @@
+students = {
+    "Alice": [1, 1, 0, 1, 1],
+    "Bob": [1, 0, 0, 1, 0],
+    "Charlie": [1, 1, 1, 1, 1]
+}
+
+print("\nAI Attendance Analysis:\n")
+
+for student, record in students.items():
+    percentage = (sum(record) / len(record)) * 100
+
+    if percentage < 75:
+        status = "AT RISK"
+    else:
+        status = "SAFE"
+
+    print(student, ":", percentage, "% →", status)
